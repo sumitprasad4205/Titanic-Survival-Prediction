@@ -1,4 +1,4 @@
-# 🚢 Titanic Survival Prediction
+# 🚢 Titanic Survival Prediction 
 
 A simple machine learning project that predicts whether a passenger survived the Titanic disaster. The goal of this project was to explore different classification algorithms, compare their performance, and understand how preprocessing and feature engineering affect prediction accuracy.
 
