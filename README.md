@@ -1,10 +1,21 @@
-# 🚢 Titanic Survival Prediction 
 
-A simple machine learning project that predicts whether a passenger survived the Titanic disaster. The goal of this project was to explore different classification algorithms, compare their performance, and understand how preprocessing and feature engineering affect prediction accuracy.
+# 🚢 Titanic Survival Prediction
+
+A machine learning project that predicts whether a passenger survived the Titanic disaster using different classification algorithms. The best-performing model was integrated into a **Flask web application** for real-time predictions.
 
 ## 📌 About the Project
 
-In this project, I worked with the Titanic dataset from Kaggle and built multiple machine learning models to classify passengers as **Survived** or **Not Survived**. Along the way, I performed data cleaning, exploratory data analysis (EDA), feature engineering, model training, and evaluation.
+This project uses the **Titanic dataset** to predict passenger survival based on features such as passenger class, age, sex, fare, and other passenger information.
+
+The workflow includes:
+
+* Data preprocessing
+* Exploratory Data Analysis (EDA)
+* Feature engineering
+* Model training
+* Model comparison
+* Model evaluation
+* Flask deployment
 
 ## 🛠️ Tech Stack
 
@@ -12,47 +23,78 @@ In this project, I worked with the Titanic dataset from Kaggle and built multipl
 * Pandas & NumPy
 * Matplotlib & Seaborn
 * Scikit-learn
-* XGBoost
+* Flask
+* HTML & CSS
 * Jupyter Notebook
 
 ## 🤖 Models Used
 
 * Logistic Regression
 * Support Vector Machine (SVM)
-* Random Forest Classifier
-* XGBoost Classifier
 * Gaussian Naive Bayes
-* Tuned Random Forest
-* Tuned XGBoost
 
-## 📊 Model Accuracy
+## 📊 Model Performance
 
-| Model               | Accuracy |
-| ------------------- | -------- |
-| Logistic Regression | **83%**  |
-| SVM                 | **83%**  |
-| Tuned XGBoost       | **83%**  |
-| Random Forest       | **82%**  |
-| Tuned Random Forest | **82%**  |
-| Naive Bayes         | **80%**  |
-| XGBoost             | **79%**  |
+All models were evaluated on the **test dataset** using the same stratified train-test split.
+
+| Model                   | Test Accuracy |
+| ----------------------- | ------------: |
+| 🥇 Logistic Regression  |    **83.24%** |
+| 🥈 SVM                  |    **82.12%** |
+| 🥉 Gaussian Naive Bayes |    **80.45%** |
+
+### 🏆 Best Model
+
+**Logistic Regression** achieved the highest test accuracy of **83.24%**.
+
+### Logistic Regression — Test Results
+
+| Class                | Precision | Recall |   F1-Score |
+| -------------------- | --------: | -----: | ---------: |
+| 0 — Did Not Survive  |    85.71% | 87.27% |     86.49% |
+| 1 — Survived         |    79.10% | 76.81% |     77.94% |
+| **Overall Accuracy** |           |        | **83.24%** |
+
+The model achieved a **macro F1-score of 82.21%** and a **weighted F1-score of 83.19%**.
+
+## 🌐 Flask Web Application
+
+The best-performing Logistic Regression model was integrated into a **Flask web application**.
+
+Users can enter passenger details through the web interface, and the application returns a prediction:
+
+* ✅ **Passenger Survived**
+* ❌ **Passenger Not Survived**
 
 ## 📈 Evaluation
 
 The models were evaluated using:
 
-* Accuracy Score
+* Accuracy
+* Precision
+* Recall
+* F1-Score
 * Confusion Matrix
-  
+* Classification Report
 
-## 🚀 What I Learned
+The dataset was split using **`stratify=y`** to maintain a similar class distribution in the training and test sets.
 
-* Handling missing values and categorical features
-* Exploratory Data Analysis (EDA)
-* Comparing different classification algorithms
-* Hyperparameter tuning
-* Evaluating model performance using multiple metrics
+## 📂 Project Structure
 
-## 📂 Dataset
+```text
+Titanic-Survival-Prediction/
+│
+├── app.py
+├── model.pkl
+├── templates/
+│   └── index.html
+├── static/
+│   └── style.css
+├── main.ipynb
+└── README.md
+```
 
-The dataset used is the **Titanic - Machine Learning from Disaster** dataset available on Kaggle.
+## 📊 Dataset
+
+The project uses the **Titanic - Machine Learning from Disaster** dataset from Kaggle.
+
