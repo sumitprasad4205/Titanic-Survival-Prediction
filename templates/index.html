@@ -8,21 +8,21 @@
 </head>
 <body>
     <div class="container">
-    <h1>🚢 Titanic Survival Prediction</h1>
-    <form action="/" class="form" method="post">
-        <input type="number" name="Pclass" placeholder="PClass" required>
-        <input type="text" name="Name" placeholder="Name" required>
-        <input type="text" name="Sex" placeholder="Sex" required>
-        <input type="number" name="Age" placeholder="Age" required>
-        <input type="number" name="SibSp" placeholder="SibSp" required>
-        <input type="number" name="Parch" placeholder="Parch" required>
-        <input type="text" name="Ticket" placeholder="Ticket" required>
-        <input type="number" name="Fare" placeholder="Fare" step="any" required>
-        <input type="text" name="Cabin" placeholder="Cabin">
-        <input type="text" name="Embarked" placeholder="Embarked" required>
-        <button type="Submit">Predict</button>
+        <h1>🚢 Titanic Survival Prediction</h1>
+        <form action="/" class="form" method="post">
+            <input type="number" name="Pclass" placeholder="Pclass" required>
+            <input type="text" name="Name" placeholder="Name" required>
+            <input type="text" name="Sex" placeholder="Sex" required>
+            <input type="number" name="Age" placeholder="Age" required>
+            <input type="number" name="SibSp" placeholder="SibSp" required>
+            <input type="number" name="Parch" placeholder="Parch" required>
+            <input type="text" name="Ticket" placeholder="Ticket" required>
+            <input type="number" name="Fare" placeholder="Fare" step="any" required>
+            <input type="text" name="Cabin" placeholder="Cabin">
+            <input type="text" name="Embarked" placeholder="Embarked">
+            <button type="submit">Predict</button>
         </form>
-        <h2>{{predicted_text}}</h2>
-        </div>
+        <h2>{{prediction}}</h2>
+    </div>
 </body>
 </html>
