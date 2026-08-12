@@ -1,45 +1,45 @@
-body {
+body{
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url(https://camo.githubusercontent.com/a636b3ab7d3bf063ab198d6f41645b6937ea760fea3a137f1fdb89a9b3f07dba/68747470733a2f2f696d61676573382e616c706861636f646572732e636f6d2f3430352f3430353032392e6a7067);
-    background-position: center;
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: 100%;
 }
-.container {
+.container{
     width: 700px;
-    height: 500px;
-    padding: 35px;
-}
-
-h1{
-    text-align: center;
-    color: powderblue;
-}
-h2{
-    text-align: center;
-    color: rgb(54, 174, 108);
+    height: 600px;
+    padding: 10px;
 }
 .form{
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    box-sizing: border-box;
+    padding: 20px;
 }
-
+h1{
+    text-align: center;
+    color: goldenrod;
+}
 input{
-    padding: 10px;
-    border:2px solid black;
-    border-radius: 5px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
     background-color: black;
+    color: blue;
 }
-button {
+button{
     grid-column: span 2;
-    padding: 10px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: skyblue;
     cursor: pointer;
-    background-color: slateblue;
+}
+h2{
+    text-align: center;
+    color: slateblue;
 }
