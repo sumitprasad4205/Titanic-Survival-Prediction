@@ -53,6 +53,10 @@ Compared three classification algorithms:
 | Logistic Regression | 84.4% |
 | SVM | 83.8% |
 
+### 🏆 Best Model
+
+Logistic Regression — 84.4% Accuracy
+
 Precision / Recall / F1-Score:
 
 | Class | Precision | Recall | F1 |
@@ -60,11 +64,7 @@ Precision / Recall / F1-Score:
 | 0 | 0.860 | 0.891 | 0.875 |
 | 1 | 0.815 | 0.768 | 0.791 |
 
-### 🏆 Best Model
-
-Logistic Regression — 84.4% Accuracy
-
-All models were evaluated on the **test dataset** using the same stratified train-test split.
+All models were evaluated on the **test dataset**
 
 ## 🌐 Flask Web Application
 
@@ -94,7 +94,7 @@ The dataset was split using **`stratify=y`** to maintain a similar class distrib
 Titanic-Survival-Prediction/
 │
 ├── app.py
-├── model.pkl
+├── titanic.pkl
 ├── templates/
 │   └── index.html
 ├── static/
