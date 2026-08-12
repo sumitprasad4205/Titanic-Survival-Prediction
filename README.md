@@ -17,6 +17,15 @@ The workflow includes:
 * Model evaluation
 * Flask deployment
 
+## 🔧 Feature Engineering
+Created the following features:
+
+- FamilySize – Total family members travelling together
+- IsAlone – Whether the passenger was travelling alone
+- HasCabin – Whether cabin information was available
+- Deck – Extracted from the cabin number
+- Title – Extracted from passenger names and grouped into categories
+
 ## 🛠️ Tech Stack
 
 * Python
@@ -29,33 +38,33 @@ The workflow includes:
 
 ## 🤖 Models Used
 
+* Random Forest Classifier
 * Logistic Regression
 * Support Vector Machine (SVM)
-* Gaussian Naive Bayes
+
 
 ## 📊 Model Performance
 
-All models were evaluated on the **test dataset** using the same stratified train-test split.
+Compared three classification algorithms:
 
-| Model                   | Test Accuracy |
-| ----------------------- | ------------: |
-| 🥇 Logistic Regression  |    **83.24%** |
-| 🥈 SVM                  |    **82.12%** |
-| 🥉 Gaussian Naive Bayes |    **80.45%** |
+| Model | Accuracy |
+|---|---:|
+| Random Forest | 79.3% |
+| Logistic Regression | 84.4% |
+| SVM | 83.8% |
+
+Precision / Recall / F1-Score:
+
+| Class | Precision | Recall | F1 |
+|---|---:|---:|---:|
+| 0 | 0.860 | 0.891 | 0.875 |
+| 1 | 0.815 | 0.768 | 0.791 |
 
 ### 🏆 Best Model
 
-**Logistic Regression** achieved the highest test accuracy of **83.24%**.
+Logistic Regression — 84.4% Accuracy
 
-### Logistic Regression — Test Results
-
-| Class                | Precision | Recall |   F1-Score |
-| -------------------- | --------: | -----: | ---------: |
-| 0 — Did Not Survive  |    85.71% | 87.27% |     86.49% |
-| 1 — Survived         |    79.10% | 76.81% |     77.94% |
-| **Overall Accuracy** |           |        | **83.24%** |
-
-The model achieved a **macro F1-score of 82.21%** and a **weighted F1-score of 83.19%**.
+All models were evaluated on the **test dataset** using the same stratified train-test split.
 
 ## 🌐 Flask Web Application
 
@@ -93,8 +102,3 @@ Titanic-Survival-Prediction/
 ├── main.ipynb
 └── README.md
 ```
-
-## 📊 Dataset
-
-The project uses the **Titanic - Machine Learning from Disaster** dataset from Kaggle.
-
