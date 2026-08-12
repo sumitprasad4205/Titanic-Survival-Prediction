@@ -4,7 +4,7 @@ import joblib
 
 app = Flask(__name__)
 
-m = joblib.load('model.pkl')
+m = joblib.load('titanic.pkl')
 model = m['LogisticRegression']
 
 def feature_engineering(df):
